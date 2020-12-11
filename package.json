@@ -3,7 +3,7 @@
 	"displayName": "GetFileName",
 	"description": "Get File Name",
 	"publisher": "kealus",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.51.0"
 	},
@@ -15,6 +15,12 @@
 	],
 	"main": "./extension.js",
 	"contributes": {
+		"commands": [
+			{
+				"command": "getfilename.getfilename",
+				"title": "Get File Name"
+			}
+		],
 		"menus": {
 			"explorer/context": [
 				{
