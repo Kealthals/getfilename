@@ -1,9 +1,19 @@
 {
 	"name": "getfilename",
 	"displayName": "GetFileName",
-	"description": "Get File Name",
+	"description": "Get File Name via simplply one click",
 	"publisher": "kealus",
-	"version": "0.0.2",
+	"version": "0.0.3",
+	"icon": "favicon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Kealthals/getfilename.git"
+	  },
+	"license": "SEE LICENSE IN LICENSE",
+	"keywords": ["get file name", "getfilename"],
+	"author": {
+		"name": "Kealsalas"
+	  },
 	"engines": {
 		"vscode": "^1.51.0"
 	},
