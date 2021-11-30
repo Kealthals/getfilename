@@ -35,7 +35,28 @@ function activate(context) {
 		vscode.window.showInformationMessage(message, {modal : false});
 	});
 
+	let disposable1 = vscode.commands.registerCommand('getfilename.getfilenameNoExt', function (node) {
+		let filePath = node.path;
+		let message = 'No file/folder selected.';
+		let fileName = '';
+		if(filePath != undefined && filePath != null && filePath != {} && filePath != "") {
+			console.log(filePath);
+			const fileNameArray = filePath.split("/");
+			if(fileNameArray.length > 1) {
+				let fileNameWithExtension = fileNameArray[fileNameArray.length - 1];
+				fileName = fileNameWithExtension.split(".")[0];
+			} else if(fileNameArray.length == 1) {
+				let fileNameWithExtension = fileNameArray[0];
+				fileName = fileNameWithExtension.split(".")[0];
+			}
+			message = fileName+ ' Copied!';
+		}
+		vscode.env.clipboard.writeText(fileName);
+		vscode.window.showInformationMessage(message, {modal : false});
+	});
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(disposable1);
 }
 exports.activate = activate;
 
