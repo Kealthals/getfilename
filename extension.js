@@ -40,6 +40,34 @@ function activate(context) {
 		let message = 'No file/folder selected.';
 		let fileName = '';
 		if(filePath != undefined && filePath != null && filePath != {} && filePath != "") {
+			filePath = filePath.replace("-meta.xml", "-meta-xml");
+			const fileNameArray = filePath.split("/");
+			if(fileNameArray.length > 1) {
+				let fileNameWithExtension = fileNameArray[fileNameArray.length - 1];
+				if(fileNameWithExtension.indexOf(".") != -1) {
+					fileName = fileNameWithExtension.substring(0, fileNameWithExtension.lastIndexOf("."));
+				} else {
+					fileName = fileNameWithExtension;
+				}
+			} else if(fileNameArray.length == 1) {
+				let fileNameWithExtension = fileNameArray[0];
+				if(fileNameWithExtension.indexOf(".") != -1) {
+					fileName = fileNameWithExtension.substring(0, fileNameWithExtension.lastIndexOf("."));
+				} else {
+					fileName = fileNameWithExtension;
+				}
+			}
+			message = fileName+ ' Copied!';
+		}
+		vscode.env.clipboard.writeText(fileName);
+		vscode.window.showInformationMessage(message, {modal : false});
+	});
+
+	let disposable2 = vscode.commands.registerCommand('getfilename.getfilenameOnlyPre', function (node) {
+		let filePath = node.path;
+		let message = 'No file/folder selected.';
+		let fileName = '';
+		if(filePath != undefined && filePath != null && filePath != {} && filePath != "") {
 			console.log(filePath);
 			const fileNameArray = filePath.split("/");
 			if(fileNameArray.length > 1) {
@@ -57,6 +85,7 @@ function activate(context) {
 
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(disposable1);
+	context.subscriptions.push(disposable2);
 }
 exports.activate = activate;
 

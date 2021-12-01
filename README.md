@@ -4,9 +4,14 @@ Get file name just with one click!
 
 ## How to USE
 There are two ways to get.
-* Right Click on file in File Explorer, then Click Get Full File Name.
-* Right Click on file in File Explorer, then Click Get No Suffix File Name.
-* Right Click on file tile in editor, then Click Get Full File Name.
-* Right Click on file tile in editor, then Click Get No Suffix File Name.
+* Right Click on file in File Explorer, then Click Get File Name Buttons.
+* Right Click on file tile in editor, then Click Get File Name Buttons.
 
 After all, File Name will be copied in your clickboard.
+
+There're three types of buttons.
+For an existing file named "AAA.BBB.txt"
+
+* Get Full File Name => AAA.BBB.txt
+* Get No Suffix File Name => AAA.BBB
+* Get Only Prefix File Name => AAA

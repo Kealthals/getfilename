@@ -3,7 +3,7 @@
 	"displayName": "GetFileName",
 	"description": "Get File Name via simplply one click",
 	"publisher": "kealus",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"icon": "favicon.png",
 	"repository": {
 		"type": "git",
@@ -22,7 +22,8 @@
 	],
 	"activationEvents": [
 		"onCommand:getfilename.getfilename",
-		"onCommand:getfilename.getfilenameNoExt"
+		"onCommand:getfilename.getfilenameNoExt",
+		"onCommand:getfilename.getfilenameOnlyPre"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -34,6 +35,10 @@
 			{
 				"command": "getfilename.getfilenameNoExt",
 				"title": "Get No Suffix File Name"
+			},
+			{
+				"command": "getfilename.getfilenameOnlyPre",
+				"title": "Get Only Prefix File Name"
 			}
 		],
 		"menus": {
@@ -47,6 +52,11 @@
 					"when": "true",
 					"command": "getfilename.getfilenameNoExt",
 					"group": "YourGroup@1"
+				},
+				{
+					"when": "true",
+					"command": "getfilename.getfilenameOnlyPre",
+					"group": "YourGroup@1"
 				}
 			],
 			"editor/title/context": [
@@ -58,6 +68,11 @@
 				{
 					"when": "true",
 					"command": "getfilename.getfilenameNoExt",
+					"group": "YourGroup@1"
+				},
+				{
+					"when": "true",
+					"command": "getfilename.getfilenameOnlyPre",
 					"group": "YourGroup@1"
 				}
 			]
