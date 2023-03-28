@@ -15,3 +15,8 @@ For an existing file named "AAA.BBB.txt"
 * Get Full File Name => AAA.BBB.txt
 * Get No Suffix File Name => AAA.BBB
 * Get Only Prefix File Name => AAA
+
+-----------------------------------------------
+Version 0.0.2 Update On 2023/03/28:
+
+**<span style="color:red">New!</span>** The function now enables the selection of multiple files.
