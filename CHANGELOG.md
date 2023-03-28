@@ -8,4 +8,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 
-- v0.0.2 Support Multiple File Selection in Explorer Bar
+- v0.0.6 Support Multiple File Selection in Explorer Bar

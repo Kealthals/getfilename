@@ -17,6 +17,6 @@ For an existing file named "AAA.BBB.txt"
 * Get Only Prefix File Name => AAA
 
 -----------------------------------------------
-Version 0.0.2 Update On 2023/03/28:
+Version 0.0.6 Update On 2023/03/28:
 
 **<span style="color:red">New!</span>** The function now enables the selection of multiple files.

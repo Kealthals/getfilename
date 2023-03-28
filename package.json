@@ -3,7 +3,7 @@
 	"displayName": "GetFileName",
 	"description": "Get File Name via simplply one click",
 	"publisher": "kealus",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"icon": "favicon.png",
 	"repository": {
 		"type": "git",
